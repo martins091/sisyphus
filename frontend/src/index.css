@@ -1,0 +1,40 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* SignupForm.css */
+/* Default styles for labels */
+label {
+  display: none; /* Hide labels by default */
+  color: #A5A5A5; /* Default label color */
+  font-size: 12px; /* Default label font size */
+  margin-top: 0.5rem; /* Default margin top for labels */
+}
+
+/* Styles for inputs when they are focused */
+input:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Show label when input is focused or has a value */
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  display: block; /* Show label */
+}
+
+/* Add more styles as needed */
