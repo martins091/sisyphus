@@ -2,7 +2,7 @@ import React from "react";
 
 const SalesOvertime = () => {
   return (
-    <div className="flex flex-col space-y-10  w-90 sm:w-90 mt-2 rounded-xl p-4"  style={{
+    <div className="flex flex-col space-y-6  w-90 sm:w-90 rounded-xl py-4 pl-4 pr-1"  style={{
         boxShadow:
           "1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1)",
       }}>
@@ -16,13 +16,13 @@ const SalesOvertime = () => {
           +3.4%
         </span>
       </div>
-      <div className="flex flex-wrap space-x-4 w-full mt-2">
-        <div className="h-2 w-80 bg-[#6A68F6] rounded-xl"></div>
-        <div className="h-2 w-80 bg-[#55AE7F] rounded-xl"></div>
+      <div className="sm:flex sm:flex-row sm:flex-wrap sm:space-x-4 md:flex-col lg:flex-row lg:flex-wrap lg:space-x-4 w-full mt-2">
+        <div className="h-2 w-80 bg-[#6A68F6] rounded-xl mt-4"></div>
+        <div className="h-2 w-80 bg-[#55AE7F] rounded-xl mt-4"></div>
       </div>
 
-      <div className="flex space-x-4 w-full">
-        <div className="flex flex-col space-y-4 bg-gray-200 p-4 rounded-xl w-80">
+      <div className="sm:flex sm:flex-row sm:flex-wrap sm:space-x-4 md:flex-col lg:flex-row lg:flex-wrap lg:space-x-4 w-full mt-2">
+        <div className="flex flex-col space-y-4 bg-gray-200 p-4 rounded-xl w-80 mt-4">
           <div className="flex space-x-2 items-center">
             <div className="bg-[#6A68F6] w-2 h-2 rounded-full"></div>
             <p>Asset received</p>
@@ -34,7 +34,7 @@ const SalesOvertime = () => {
             </span>
           </div>
         </div>
-        <div className="flex flex-col space-y-4 bg-gray-200 p-4 rounded-xl w-80">
+        <div className="flex flex-col space-y-4 bg-gray-200 p-4 rounded-xl w-80 mt-4">
           <div className="flex space-x-2 items-center">
             <div className="bg-[#55AE7F] w-2 h-2 rounded-full"></div>
             <p className="text-[#55AE7F]">Spending</p>

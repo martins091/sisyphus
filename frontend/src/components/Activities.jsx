@@ -7,7 +7,7 @@ import { GrFormCheckmark } from "react-icons/gr";
 
 const Activities = () => {
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto">
       <div className="flex flex-col space-y-6 mt-10 ml-10">
         <div className="">
           <h1 className="text-3xl font-semibold  sm:font-bold mb-4">
@@ -20,7 +20,7 @@ const Activities = () => {
           </p>
         </div>
         <div className="flex flex-col sm:flex-row flex-wrap md:flex-row lg:flex-row sm:space-x-8">
-          <div className="flex flex-col sm:flex-row md:flex-col lg:space-x-6 lg:flex-row ">
+          <div className="flex flex-col sm:flex-row md:flex-col lg:space-x-8 lg:flex-row ">
             <div
               className="flex justify-start w-80  space-x-4 mb-0 md:mb-6 pr-20 pl-6 py-5 rounded-xl"
               style={{
@@ -56,7 +56,7 @@ const Activities = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row md:flex-col lg:space-x-6 lg:flex-row mt-8 sm:mt-0 flex-wrap ">
+          <div className="flex flex-col sm:flex-row md:flex-col lg:space-x-8 lg:flex-row mt-8 sm:mt-0 flex-wrap ">
             <div
               className="flex justify-start w-80 ml-0 mb-0 md:mb-6 space-x-4 pr-0 pl-6 py-5 rounded-xl"
               style={{

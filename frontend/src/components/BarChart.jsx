@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ReferenceLine } from "recharts";
 
 const BarChartComponent = () => {
@@ -14,9 +14,29 @@ const BarChartComponent = () => {
     { name: "Mon", uv: 450 },
   ];
 
+  const [chartWidth, setChartWidth] = useState(200);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setChartWidth(600);
+      } else if (window.innerWidth >= 640) {
+        setChartWidth(400);
+      } else {
+        setChartWidth(300);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
-      className="mt-2 flex flex-col space-y-4 ml-0 sm:ml-10 p-6 sm:pr-16 pr-0 rounded-xl"
+      className="mt-4 flex flex-col space-y-4 ml-0 sm:ml-10 p-6 sm:pr-12 pr-0 rounded-xl"
       style={{
         boxShadow:
           "1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1)",
@@ -28,8 +48,8 @@ const BarChartComponent = () => {
           On the week on website and compare with e-commerce
         </p>
       </div>
-      <div>
-        <BarChart width={580} height={250} data={data}>  
+      <div className="bar-chart-container">
+        <BarChart width={chartWidth} height={250} data={data}>
           <XAxis
             dataKey="name"
             tick={{ fill: "gray", fontSize: 18, fontWeight: "semibold" }}
@@ -50,7 +70,7 @@ const BarChartComponent = () => {
             dataKey="uv"
             fill="#FEECD6"
             stackId="stack"
-            barSize={40}
+            barSize={30} // Adjust the bar size as needed
             radius={[8, 8, 0, 0]}
           />
         </BarChart>

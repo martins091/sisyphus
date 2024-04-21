@@ -1,7 +1,7 @@
 import React from "react";
 import SignupForm from "../components/SignupForm";
 
-const Signup = () => {
+const Signup = ({ hideSidebar }) => {
   return (
     <div className="min-h-screen py-10 bg-gradient-to-r from-[#321E90] via-[#000102] to-[#321E90]">
       <div className="flex flex-col lg:flex-row mx-4 lg:mx-20">

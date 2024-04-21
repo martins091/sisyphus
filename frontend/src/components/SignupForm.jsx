@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { PiEyeThin, PiEyeSlashThin } from "react-icons/pi";
 import axios from "axios";
 import md5 from 'md5';
+import { useNavigate } from "react-router-dom";
 
 
 const SignupForm = () => {
@@ -21,6 +22,7 @@ const SignupForm = () => {
     password: false,
     mobile: false,
   });
+  const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
@@ -41,6 +43,7 @@ const SignupForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    navigate("/home")
   
     // Generate the Security-Key
     const securityKey = md5('TBC' + '|' + 'eyJyNzMyZTEzNGMyMTg5NTEiiOjE1ODAzODQyNTA3MDN9');
@@ -52,16 +55,13 @@ const SignupForm = () => {
     };
   
     try {
-      // Make the POST request to your backend server
       console.log('Request Body:', formData);
       console.log('Request Headers:', headers);
       const response = await axios.post('http://localhost:5000/signup', formData, { headers: headers });
   
       console.log('Response:', response.data);
-      // Handle the response data as needed
     } catch (error) {
       console.error('Error:', error);
-      // Handle errors here
     }
 };
 
@@ -262,7 +262,7 @@ const SignupForm = () => {
         <div className="flex justify-center items-center">
           <p className="text-xs mt-4 mb-6 text-gray-600 font-semibold">
             Already have an account?{" "}
-            <span className="text-indigo-600">Login</span>{" "}
+            <span className="text-indigo-600 cursor-pointer" onClick={navigate("/signin")}>Login</span>{" "}
           </p>
         </div>
       </form>

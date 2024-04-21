@@ -32,21 +32,21 @@ const Sidebar = () => {
           <Link
             key={index}
             className={`flex items-center space-x-2 mx-4 px-4 my-3 py-3 text-gray-500 text-lg font-semibold hover:bg-[#F5F5F5] hover:text-[#009D54] rounded-xl ${
-              location.pathname === "/" && item.name === "Home"
-                ? "bg-[#F5F5F5] text-[#009D54] !important"
+              location.pathname === "/home" && item.name === "Home"
+                ? "bg-[#F5F5F5] text-[#009D54]"
                 : ""
             }`}
           >
             {React.cloneElement(item.icon, {
               className: `${
-                location.pathname === "/" && item.name === "Home"
+                location.pathname === "/home" && item.name === "Home"
                   ? "text-[#009D54]"
                   : ""
               }`,
             })}
             <span
               className={
-                location.pathname === "/" && item.name === "Home"
+                location.pathname === "/home" && item.name === "Home"
                   ? "text-[#009D54]"
                   : ""
               }
