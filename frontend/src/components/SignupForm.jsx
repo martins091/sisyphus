@@ -262,7 +262,7 @@ const SignupForm = () => {
         <div className="flex justify-center items-center">
           <p className="text-xs mt-4 mb-6 text-gray-600 font-semibold">
             Already have an account?{" "}
-            <span className="text-indigo-600 cursor-pointer" onClick={navigate("/signin")}>Login</span>{" "}
+            <span className="text-indigo-600 cursor-pointer">Login</span>{" "}
           </p>
         </div>
       </form>
