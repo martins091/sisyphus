@@ -24,7 +24,7 @@ const Sidebar = () => {
       style={{ boxShadow: "2px 0 0 rgba(0, 0, 0, 0.1)" }}
     >
       <div className="flex space-x-4 justify-center items-center -ml-10 pt-10">
-        <img src="logo.png" alt="" />
+        <img src="logo.PNG" alt="" />
         <h1 className="text-3xl font-bold mb-4">Sisyphus</h1>
       </div>
       <div className="mt-10">
