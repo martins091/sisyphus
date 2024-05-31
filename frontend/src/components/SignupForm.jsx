@@ -67,19 +67,19 @@ const SignupForm = () => {
 
 
   return (
-    <div className="px-4 mx-auto mt-14 max-w-lg sm:px-0">
-      <h1 className="text-3xl font-bold mb-4 ">Sign Up</h1>
-      <button className="w-full bg-[#F3F6F9] text-black text-xs font-bold py-2 rounded-md mt-6 flex space-x-2 items-center justify-center mb-2">
+    <div className="px-3 mx-auto mt-14 max-w-lg sm:px-0">
+      <h1 className="text-2xl font-bold mb-4 ">Sign Up</h1>
+      <button className="w-full bg-[#F3F6F9] text-black text-xs font-bold py-2 rounded-md mt-5 flex space-x-2 items-center justify-center mb-2">
         <img src="google.png" alt="google" className="w-6 h-6" />
         <p> Sign up with Google</p>
       </button>
-      <div className="flex space-x-4 mb-6 ">
+      <div className="flex space-x-4 mb-4 ">
         <p className="w-60 border-b-2"></p>
         <p className="-mb-2 text-gray-400">on</p>
         <p className="w-60 border-b-2"></p>
       </div>
       <form onSubmit={handleSubmit}>
-        <div className="mb-6">
+        <div className="mb-4">
           <div className="mt-1 relative">
             <label
               htmlFor="email"
@@ -96,8 +96,9 @@ const SignupForm = () => {
               id="email"
               name="email"
               value={formData.email}
+              required
               onChange={handleChange}
-              className={`w-full px-4 py-5 border border-gray-300 font-bold rounded-xl shadow-sm focus:ring-indigo-500 sm:text-sm focus:outline-none ${
+              className={`w-full px-4 py-4 border border-gray-300 font-bold rounded-xl shadow-sm focus:ring-indigo-500 sm:text-sm focus:outline-none ${
                 focusState.email ? "focus-visible" : ""
               }`}
               onFocus={() => handleFocus("email")}
@@ -108,7 +109,7 @@ const SignupForm = () => {
             Please enter your email ID
           </p>
         </div>
-        <div className="mb-6">
+        <div className="mb-4">
           <div className="flex space-x-4">
             <div className="w-1/2">
               <div className="mt-1 relative">
@@ -126,9 +127,10 @@ const SignupForm = () => {
                   type="text"
                   id="firstName"
                   name="firstName"
+                  required
                   value={formData.firstName}
                   onChange={handleChange}
-                  className={`w-full px-4 py-5 border border-gray-300 font-bold rounded-xl shadow-sm focus:ring-indigo-500 sm:text-sm focus:outline-none ${
+                  className={`w-full px-4 py-4 border border-gray-300 font-bold rounded-xl shadow-sm focus:ring-indigo-500 sm:text-sm focus:outline-none ${
                     focusState.firstName ? "focus-visible" : ""
                   }`}
                   onFocus={() => handleFocus("firstName")}
@@ -152,9 +154,10 @@ const SignupForm = () => {
                   type="text"
                   id="lastName"
                   name="lastName"
+                  required
                   value={formData.lastName}
                   onChange={handleChange}
-                  className={`w-full px-4 py-5 border border-gray-300 font-bold rounded-xl shadow-sm focus:ring-indigo-500 sm:text-sm focus:outline-none ${
+                  className={`w-full px-4 py-4 border border-gray-300 font-bold rounded-xl shadow-sm focus:ring-indigo-500 sm:text-sm focus:outline-none ${
                     focusState.lastName ? "focus-visible" : ""
                   }`}
                   onFocus={() => handleFocus("lastName")}
@@ -167,7 +170,7 @@ const SignupForm = () => {
             Make sure it matches the number on your PAN card
           </p>
         </div>
-        <div className="mb-6">
+        <div className="mb-4">
           <div className="mt-1 relative">
             <label
               htmlFor="password"
@@ -183,9 +186,10 @@ const SignupForm = () => {
               type={showPassword ? "text" : "password"}
               id="password"
               name="password"
+              required
               value={formData.password}
               onChange={handleChange}
-              className={`w-full px-4 py-5 border border-gray-300 font-bold rounded-xl shadow-sm focus:ring-indigo-500 sm:text-sm focus:outline-none ${
+              className={`w-full px-4 py-4 border border-gray-300 font-bold rounded-xl shadow-sm focus:ring-indigo-500 sm:text-sm focus:outline-none ${
                 focusState.password ? "focus-visible" : ""
               }`}
               onFocus={() => handleFocus("password")}
@@ -208,7 +212,7 @@ const SignupForm = () => {
           </p>
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <div className="mt-1 relative">
             <label
               htmlFor="mobile"
@@ -221,16 +225,17 @@ const SignupForm = () => {
               Mobile
             </label>
             <div className="flex justify-start space-x-0 items-center border border-t-0 border-gray-300 py-1 px-1 rounded-xl ">
-              <span className=" text-sm font-bold bg-[#F3F6F9] -my-4 -ml-1 py-5 pl-6 pr-4 text-gray-400 rounded-xl">
+              <span className=" text-sm font-bold bg-[#F3F6F9] -my-3 -ml-1 py-4 pl-6 pr-4 text-gray-400 rounded-xl">
                 +91
               </span>
               <input
                 type=""
                 id="mobile"
                 name="mobile"
+                required
                 value={formData.mobile}
                 onChange={handleChange}
-                className={`w-full px-3 py-4 font-bold focus:ring-indigo-500 sm:text-sm focus:outline-none ${
+                className={`w-full px-3 py-3 font-bold focus:ring-indigo-500 sm:text-sm focus:outline-none ${
                   focusState.mobile ? "focus-visible" : ""
                 }`}
                 onFocus={() => handleFocus("mobile")}
@@ -243,7 +248,7 @@ const SignupForm = () => {
           </p>
         </div>
 
-        <div className="text-xs text-gray-600 font-semibold my-4">
+        <div className="text-xs text-gray-600 font-semibold my-3">
           <p>
             By selecting Agree and continue, I agree to Spar{" "}
             <span className="text-indigo-600">Terms of Service</span> &{" "}
@@ -255,7 +260,7 @@ const SignupForm = () => {
         </div>
         <button
           type="submit"
-          className="w-full px-4 py-3 text-xs font-medium text-white bg-[#36B37E] rounded-md mt-2 focus:outline-none"
+          className="w-full px-4 py-2 text-xs font-medium text-white bg-[#36B37E] rounded-md mt-2 focus:outline-none"
         >
           Agree and Continue
         </button>

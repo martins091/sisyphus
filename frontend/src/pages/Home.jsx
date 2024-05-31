@@ -12,7 +12,7 @@ const Home = () => {
     setShowSidebar(!showSidebar);
   };
   return (
-    <div className="">
+    <div className="mb-10">
       <div>
         <div
           className={`lg:block fixed z-10 ${
@@ -23,22 +23,24 @@ const Home = () => {
         </div>
         <div className="lg:hidden fixed top-0 right-0 m-4">
           {showSidebar ? (
-            <IoClose size={50}
+            <IoClose
+              size={30}
               onClick={toggleSidebar}
-              className="text-3xl cursor-pointer p-2 bg-[#55AE7F] text-white rounded-full"
+              className="text-xl cursor-pointer p-2 bg-[#55AE7F] text-white rounded-full"
             />
           ) : (
-            <IoMenu size={50}
+            <IoMenu
+              size={30}
               onClick={toggleSidebar}
               className="text-3xl cursor-pointer p-2 bg-[#55AE7F] text-white rounded-full"
             />
           )}
         </div>
       </div>
-      <div className="ml-0 lg:ml-80">
+      <div className="ml-0 lg:ml-60">
         <HomeHeader />
         <Activities />
-        <div className="flex space-x-8 space-y-4 flex-wrap">
+        <div className="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 flex-wrap">
           <BarChart />
           <SalesOvertime />
         </div>

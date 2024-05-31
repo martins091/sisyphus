@@ -7,10 +7,10 @@ import { GrFormCheckmark } from "react-icons/gr";
 
 const Activities = () => {
   return (
-    <div className="mx-auto">
+    <div className="mr-5 ml-0">
       <div className="flex flex-col space-y-6 mt-10 ml-10">
         <div className="">
-          <h1 className="text-3xl font-semibold  sm:font-bold mb-4">
+          <h1 className="text-xl font-semibold mb-4">
             Welcome back, Antonio
           </h1>
           <p className="sm:text-sm text-xs font-semibold text-gray-500 whitespace-pre-line">
@@ -22,34 +22,34 @@ const Activities = () => {
         <div className="flex flex-col sm:flex-row flex-wrap md:flex-row lg:flex-row sm:space-x-8">
           <div className="flex flex-col sm:flex-row md:flex-col lg:space-x-8 lg:flex-row ">
             <div
-              className="flex justify-start w-80  space-x-4 mb-0 md:mb-6 pr-20 pl-6 py-5 rounded-xl"
+              className="flex justify-start w-50  space-x-4 mb-0 md:mb-6 pr-12 pl-6 py-3 rounded-xl"
               style={{
                 boxShadow:
                   "1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1)",
               }}
             >
               <div className="p-4 bg-[#F5F5F5] rounded-full  text-[#009D54]">
-                <TbCash size={25} />
+                <TbCash size={20} />
               </div>
               <div>
-                <h1 className="text-2xl  font-bold mb-1">₹6,10,9287</h1>
+                <h1 className="text-xl  font-semibold mb-1">₹6,10,9287</h1>
                 <span className="text-sm font-semibold text-gray-500">
                   Total Revenue
                 </span>
               </div>
             </div>
             <div
-              className="flex justify-start w-80 space-x-4 mb-0 md:mb-6  pr-20 pl-6 py-5 rounded-xl mt-6 sm:mt-0"
+              className="flex justify-start w-50 space-x-4 mb-0 md:mb-6  pr-16 pl-6 py-3 rounded-xl mt-6 sm:mt-0"
               style={{
                 boxShadow:
                   "1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1)",
               }}
             >
               <div className="p-4 bg-[#F5F5F5] rounded-full text-[#6163CF]">
-                <GoPeople size={25} />
+                <GoPeople size={20} />
               </div>
               <div>
-                <h1 className="text-2xl  font-bold mb-1">12,04,4324</h1>
+                <h1 className="text-xl  font-semibold mb-1">12,04,4324</h1>
                 <span className="text-sm font-semibold text-gray-500">
                   Total Customer
                 </span>
@@ -58,35 +58,35 @@ const Activities = () => {
           </div>
           <div className="flex flex-col sm:flex-row md:flex-col lg:space-x-8 lg:flex-row mt-8 sm:mt-0 flex-wrap ">
             <div
-              className="flex justify-start w-80 ml-0 mb-0 md:mb-6 space-x-4 pr-0 pl-6 py-5 rounded-xl"
+              className="flex justify-start w-50 space-x-4 mb-6 pr-10 pl-6 py-3 rounded-xl mt-6 sm:mt-0"
               style={{
                 boxShadow:
                   "1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1)",
               }}
             >
               <div className="p-4 bg-[#F5F5F5] rounded-full text-[#009D54]">
-                <PiArrowsCounterClockwiseBold size={25} />
+                <PiArrowsCounterClockwiseBold size={20} />
               </div>
               <div>
-                <h1 className="text-2xl  font-bold mb-1">8,34,3782</h1>
+                <h1 className="text-xl  font-bold mb-1">8,34,3782</h1>
                 <span className="text-sm font-semibold text-gray-500">
                   Total Transaction
                 </span>
               </div>
             </div>
             <div
-              className="flex justify-start w-80 space-x-4 mb-6 pr-20 pl-6 py-5 rounded-xl mt-6 sm:mt-0"
+              className="flex justify-start w-50 space-x-4 mb-6 pr-10 pl-6 py-3 rounded-xl mt-6 sm:mt-0"
               style={{
                 boxShadow:
                   "1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1)",
               }}
             >
               <div className="p-4 bg-[#F5F5F5] rounded-full text-[#6163CF] relative">
-                <BsBoxSeam size={25} />
+                <BsBoxSeam size={20} />
                 <GrFormCheckmark className="absolute top-6 bg-white rounded-full right-2" />
               </div>
               <div>
-                <h1 className="text-2xl  font-bold mb-1">4,00,9287</h1>
+                <h1 className="text-xl  font-bold mb-1">4,00,9287</h1>
                 <span className="text-sm font-semibold text-gray-500">
                   Total Revenue
                 </span>

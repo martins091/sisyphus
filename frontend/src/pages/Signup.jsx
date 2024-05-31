@@ -3,12 +3,12 @@ import SignupForm from "../components/SignupForm";
 
 const Signup = ({ hideSidebar }) => {
   return (
-    <div className="min-h-screen py-10 bg-gradient-to-r from-[#321E90] via-[#000102] to-[#321E90]">
-      <div className="flex flex-col lg:flex-row mx-4 lg:mx-20">
-        <div className="text-white bg-[#2862F1] relative pt-10 rounded-tr-3xl rounded-tl-3xl lg:rounded-tr-none lg:rounded-tl-3xl lg:rounded-bl-3xl lg:w-1/2 pb-6">
-          <div className="pl-10 flex items-center">
+    <div className="min-h-screen py-8 bg-gradient-to-r from-[#321E90] via-[#000102] to-[#321E90]">
+      <div className="flex flex-col lg:flex-row mx-4 lg:mx-18">
+        <div className="text-white bg-[#2862F1] relative pt-8 rounded-tr-3xl rounded-tl-3xl lg:rounded-tr-none lg:rounded-tl-3xl lg:rounded-bl-3xl lg:w-1/2 pb-6">
+          <div className="pl-8 flex items-center">
             <img src="sparlogo.png" alt="" />
-            <h1 className="text-xl lg:text-3xl font-semibold">Spar</h1>
+            <h1 className="text-xl lg:text-2xl font-semibold">Spar</h1>
           </div>
           <div className="mt-4 lg:mt-8">
             <img
@@ -17,8 +17,8 @@ const Signup = ({ hideSidebar }) => {
               className="w-full lg:h-auto"
             />
           </div>
-          <div className="mt-8 lg:mt-12 pl-6 lg:pl-16">
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
+          <div className="mt-8 lg:mt-10 pl-6 lg:pl-16">
+            <h1 className="text-xl md:text-2xl lg:text-2xl font-semibold">
               We simplify your <br />
               financial handlings
             </h1>

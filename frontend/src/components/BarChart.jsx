@@ -19,9 +19,9 @@ const BarChartComponent = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setChartWidth(600);
+        setChartWidth(450);
       } else if (window.innerWidth >= 640) {
-        setChartWidth(400);
+        setChartWidth(350);
       } else {
         setChartWidth(300);
       }
@@ -36,20 +36,20 @@ const BarChartComponent = () => {
 
   return (
     <div
-      className="mt-4 flex flex-col space-y-4 ml-0 sm:ml-10 p-6 sm:pr-12 pr-0 rounded-xl"
+      className=" flex flex-col space-y-4 ml-0 sm:ml-10 p-6 sm:pr-12 pr-0 rounded-xl"
       style={{
         boxShadow:
           "1px 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px 1px rgba(0, 0, 0, 0.1)",
       }}
     >
       <div>
-        <h1 className="text-2xl font-bold mb-2">Revenue Growth</h1>
+        <h1 className="text-xl font-semibold mb-2">Revenue Growth</h1>
         <p className="text-sm font-semibold text-gray-500 mb-4">
           On the week on website and compare with e-commerce
         </p>
       </div>
       <div className="bar-chart-container">
-        <BarChart width={chartWidth} height={250} data={data}>
+        <BarChart width={chartWidth} height={200} data={data}>
           <XAxis
             dataKey="name"
             tick={{ fill: "gray", fontSize: 18, fontWeight: "semibold" }}
